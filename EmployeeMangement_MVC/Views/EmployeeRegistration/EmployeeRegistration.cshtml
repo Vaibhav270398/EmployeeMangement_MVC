@@ -1,0 +1,95 @@
+﻿@model EmployeeMangement_MVC.Models.EmployeeRegistrationModel;
+@{
+    ViewData["Title"] = "EmployeeRegistration";
+    Layout = "~/Views/Shared/_LayoutView.cshtml";
+}
+
+<main id="main" class="main">
+    <section class="section">
+        <div class="row">
+            <div class="col-lg-12">
+
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Employee Registration Form</h5>
+
+                        <!-- General Form Elements -->
+                        <form method="post" asp-action="EmployeeRegistration" asp-controller="EmployeeRegistration">
+                            <div class="row mb-3">
+                                <label for="inputText" class="col-sm-2 col-form-label">Employee Name</label>
+                                <div class="col-sm-3">
+                                    <input type="text" class="form-control" asp-for="Name" name="Name"  id="yourName" required>
+                                </div>
+                                <label for="inputEmail" class="col-sm-2 col-form-label">Mobile Number</label>
+                                <div class="col-sm-3">
+                                    <input type="number" class="form-control" asp-for="MobileNumber" name="MobileNumber" id="yourMobileNumber" required>
+                                </div>
+                            </div>
+                            <div class="row mb-3">
+                                <label for="inputNumber" class="col-sm-2 col-form-label">Address</label>
+                                <div class="col-sm-3">
+                                    <input type="text" class="form-control" asp-for="Address" name="Address" id="yourAddress" required>
+                                </div>
+                                <label for="inputNumber" class="col-sm-2 col-form-label">City</label>
+                                <div class="col-sm-3">
+                                    <input type="text" class="form-control" asp-for="City" name="City" id="yourCity" required>
+                                </div>
+                            </div>
+                            <div class="row mb-3">
+                                <label for="inputEmail" class="col-sm-2 col-form-label">Email ID</label>
+                                <div class="col-sm-3">
+                                    <input type="email" class="form-control" asp-for="EmailID" name="EmailID" id="yourEmailID" required>
+                                </div>
+                                <label for="inputPassword" class="col-sm-2 col-form-label">Date Of Birth</label>
+                                <div class="col-sm-3">
+                                    <input type="date" class="form-control" asp-for="DateOfBirth" name="DateOfBirth" id="yourDateOfBirth" required>
+                                </div>
+                            </div>                             
+                            <div class="row mb-3">
+                                <label for="inputDate" class="col-sm-2 col-form-label">PinCode</label>
+                                <div class="col-sm-3">
+                                    <input type="text" class="form-control" asp-for="PinCode" name="PinCode" id="yourPinCode" required>
+                                </div>
+                                <label for="inputDate" class="col-sm-2 col-form-label">Gender</label>
+                                <div class="col-sm-3">
+                                    <label>
+                                        <input asp-for="Gender" class="form-check-input" type="radio" value="1" /> Male
+                                    </label>
+                                    <label>
+                                        <input asp-for="Gender" class="form-check-input" type="radio" value="2" /> Female
+                                    </label>
+                                    <label>
+                                        <input asp-for="Gender" class="form-check-input" type="radio" value="3" /> Other
+                                    </label>
+                                </div>
+                                
+                            </div>
+                            <div class="row mb-3">
+                                <label for="inputNumber" class="col-sm-2 col-form-label">UserName</label>
+                                <div class="col-sm-3">
+                                    <input type="text" class="form-control" asp-for="UserName" name="UserName" id="yourUserName" required>
+                                </div>
+                                <label for="inputNumber" class="col-sm-2 col-form-label">Password</label>
+                                <div class="col-sm-3">
+                                    <input type="password" class="form-control" asp-for="Password" name="Password" id="yourPassword" required>
+                                </div>
+                            </div>
+                   
+
+                            <div class="row mb-3">
+                                <div class="col-sm-10">
+                                    <button type="submit" class="btn btn-primary">Submit</button>
+                                </div>
+                            </div>
+
+                        </form><!-- End General Form Elements -->
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+</main><!-- End #main -->
